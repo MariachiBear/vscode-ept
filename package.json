@@ -1,0 +1,65 @@
+{
+    "author": "Author Name",
+    "bugs": {
+        "url": "https://github.com/link/to/your/repository/issues"
+    },
+    "categories": [
+        "Extension Packs"
+    ],
+    "description": "Template to create a new Visual Studio Code extension pack",
+    "devDependencies": {
+        "@vscode/vsce": "^2.18.0",
+        "cross-env": "^7.0.3",
+        "eslint": "^8.36.0",
+        "eslint-config-prettier": "^8.8.0",
+        "eslint-scope": "^7.1.1",
+        "eslint-utils": "^3.0.0",
+        "eslint-visitor-keys": "^3.3.0",
+        "husky": "^8.0.3",
+        "lint-staged": "^13.2.0",
+        "pnpm": "^7.30.3",
+        "prettier": "^2.8.7",
+        "prompt-confirm": "^2.0.4",
+        "rimraf": "^4.4.1",
+        "yarn": "^1.22.19"
+    },
+    "displayName": "Extension Pack Template",
+    "engines": {
+        "vscode": "^1.58.0"
+    },
+    "extensionPack": [
+        "publisher.extensionName"
+    ],
+    "homepage": "https://github.com/link/to/your/repository#readme",
+    "icon": "icon.png",
+    "keywords": [],
+    "license": "MIT",
+    "name": "extension-pack-template",
+    "publisher": "Publisher ID",
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/link/to/your/repository.git"
+    },
+    "scripts": {
+        "build": "pnpm build:clean && pnpm build:install && pnpm build:package",
+        "build:clean": "rimraf ./*.vsix && rimraf ./node_modules",
+        "build:install": "yarn install --ignore-engines",
+        "build:package": "vsce package --yarn",
+        "deploy": "pnpm deploy:confirm && pnpm build && pnpm deploy:publish",
+        "deploy:confirm": "cross-env NODE_ENV=prompt:confirm node node-scripts.js",
+        "deploy:publish": "vsce publish --yarn",
+        "eslint:check": "eslint --ext .js,.jsx --ignore-path .gitignore . --color",
+        "eslint:fix": "eslint --ext .js,.jsx --ignore-path .gitignore . --fix",
+        "prettier:check": "prettier \"./**/*.{js,jsx}\" --ignore-path .gitignore -l ",
+        "prettier:format": "prettier \"./**/*.{js,jsx}\" --ignore-path .gitignore -l --write",
+        "refresh": "pnpm refresh:clean && npm init -y && pnpm refresh:clear",
+        "refresh:clean": "cross-env NODE_ENV=refresh:clean node node-scripts.js",
+        "refresh:clear": "cross-env NODE_ENV=refresh:clear node node-scripts.js",
+        "prepare": "husky install"
+    },
+    "version": "0.0.0",
+    "lint-staged": {
+        "*.js": "eslint --cache --fix",
+        "*.{js,css,md}": "prettier --write"
+    }
+}
