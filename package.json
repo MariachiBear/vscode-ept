@@ -34,6 +34,10 @@
     "icon": "icon.png",
     "keywords": [],
     "license": "MIT",
+    "lint-staged": {
+        "*.js": "eslint --cache --fix",
+        "*.{js,css,md}": "prettier --write"
+    },
     "name": "extension-pack-template",
     "publisher": "Publisher ID",
     "repository": {
@@ -50,16 +54,12 @@
         "deploy:publish": "vsce publish --yarn",
         "eslint:check": "eslint --ext .js,.jsx --ignore-path .gitignore . --color",
         "eslint:fix": "eslint --ext .js,.jsx --ignore-path .gitignore . --fix",
+        "prepare": "husky install",
         "prettier:check": "prettier \"./**/*.{js,jsx}\" --ignore-path .gitignore -l ",
         "prettier:format": "prettier \"./**/*.{js,jsx}\" --ignore-path .gitignore -l --write",
         "refresh": "pnpm refresh:clean && npm init -y && pnpm refresh:clear",
         "refresh:clean": "cross-env NODE_ENV=refresh:clean node node-scripts.js",
-        "refresh:clear": "cross-env NODE_ENV=refresh:clear node node-scripts.js",
-        "prepare": "husky install"
+        "refresh:clear": "cross-env NODE_ENV=refresh:clear node node-scripts.js"
     },
-    "version": "0.0.0",
-    "lint-staged": {
-        "*.js": "eslint --cache --fix",
-        "*.{js,css,md}": "prettier --write"
-    }
+    "version": "0.0.0"
 }
