@@ -20,8 +20,7 @@
         "pnpm": "7.30.3",
         "prettier": "2.8.7",
         "prompt-confirm": "2.0.4",
-        "rimraf": "4.4.1",
-        "yarn": "1.22.19"
+        "rimraf": "4.4.1"
     },
     "displayName": "Extension Pack Template",
     "engines": {
@@ -47,11 +46,11 @@
     "scripts": {
         "build": "pnpm build:clean && pnpm build:install && pnpm build:package",
         "build:clean": "rimraf ./*.vsix && rimraf ./node_modules",
-        "build:install": "yarn install --ignore-engines",
-        "build:package": "vsce package --yarn",
+        "build:install": "npm install --ignore-engines",
+        "build:package": "vsce package",
         "deploy": "pnpm deploy:confirm && pnpm build && pnpm deploy:publish",
         "deploy:confirm": "cross-env NODE_ENV=prompt:confirm node node-scripts.js",
-        "deploy:publish": "vsce publish --yarn",
+        "deploy:publish": "vsce publish",
         "eslint:check": "eslint --ext .js,.jsx --ignore-path .gitignore . --color",
         "eslint:fix": "eslint --ext .js,.jsx --ignore-path .gitignore . --fix",
         "prepare": "husky install",
