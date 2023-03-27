@@ -31,7 +31,7 @@ Template to create a new visual studio code extension pack
 
 -  `build`: Executes `build:clean`, `build:install` and `build:package` scripts in that order.
 -  `build:clean`: Removes any `.vsix` file and the `node_modules` folder in the repository.
--  `build:install`: Install dependencies with yarn to obtain the `yarn.lock` file.
+- `build:install`: Install dependencies with npm to obtain the `package-lock.json` file.
 -  `build:package`: Create a `.vsix` file with the packaged extension with the current
    configuration.
 -  `deploy`: Executes `deploy:confirm`, `build` and `deploy:publish` scripts in that order.
