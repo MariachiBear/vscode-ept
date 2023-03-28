@@ -17,7 +17,7 @@
         "eslint-visitor-keys": "3.3.0",
         "husky": "^8.0.3",
         "lint-staged": "^13.2.0",
-        "pnpm": "7.30.3",
+        "pnpm": "7.30.5",
         "prettier": "2.8.7",
         "prompt-confirm": "2.0.4",
         "rimraf": "4.4.1"
