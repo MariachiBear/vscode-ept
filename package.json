@@ -15,8 +15,8 @@
         "eslint-scope": "7.1.1",
         "eslint-utils": "3.0.0",
         "eslint-visitor-keys": "3.3.0",
-        "husky": "8.0.3",
-        "lint-staged": "13.2.0",
+        "husky": "^8.0.3",
+        "lint-staged": "^13.2.0",
         "pnpm": "7.30.3",
         "prettier": "2.8.7",
         "prompt-confirm": "2.0.4",
@@ -35,7 +35,7 @@
     "license": "MIT",
     "lint-staged": {
         "*.js": "eslint --cache --fix",
-        "*.{js,css,md}": "prettier --write"
+        "*.{js,css}": "prettier --write"
     },
     "name": "extension-pack-template",
     "publisher": "Publisher ID",
