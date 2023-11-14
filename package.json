@@ -24,7 +24,7 @@
     },
     "displayName": "Extension Pack Template",
     "engines": {
-        "vscode": "^1.58.0"
+        "vscode": "^2023.0.0"
     },
     "extensionPack": [
         "publisher.extensionName"
