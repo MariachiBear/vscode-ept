@@ -20,7 +20,7 @@
         "pnpm": "8.0.0",
         "prettier": "2.8.7",
         "prompt-confirm": "2.0.4",
-        "rimraf": "4.4.1"
+        "rimraf": "5.0.7"
     },
     "displayName": "Extension Pack Template",
     "engines": {
