@@ -8,7 +8,7 @@
     ],
     "description": "Template to create a new Visual Studio Code extension pack",
     "devDependencies": {
-        "@vscode/vsce": "2.26.1",
+        "@vscode/vsce": "2.32.0",
         "cross-env": "7.0.3",
         "eslint": "9.2.0",
         "eslint-config-prettier": "9.1.0",
