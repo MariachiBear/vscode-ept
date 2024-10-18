@@ -10,7 +10,7 @@
     "devDependencies": {
         "@vscode/vsce": "2.26.1",
         "cross-env": "7.0.3",
-        "eslint": "9.2.0",
+        "eslint": "9.13.0",
         "eslint-config-prettier": "9.1.0",
         "eslint-scope": "8.0.1",
         "eslint-utils": "3.0.0",
